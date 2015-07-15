@@ -1,3 +1,0 @@
-need to import items from res file, then add them to their respective rooms. DONE
-handle multiple items in one room.
-then player can interact with the items. 
