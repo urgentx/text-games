@@ -16,7 +16,7 @@ public static void main(String [] args) {
 	while (player.isAlive()){
 		int index = rooms.indexOf(player.getPosition());
 		rooms.get(index).entrance(player);
-		rooms.get(index).getInput(player);
+		//rooms.get(index).getInput(player);
 		break;
 	}
 	

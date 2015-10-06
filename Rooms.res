@@ -1,1 +1,1 @@
-Rape Dungeon|The grim snarl of Alf Stewart precedes his entrance into your visual spectrum. Your mother told you never to talk to strangers, but you're entirely unsure of how to handle this one. There are chains in the corner.|Chains|The chains clink menacingly at you.
+Rape Dungeon|The grim snarl of Alf Stewart precedes his entrance into your visual spectrum. Your mother told you never to talk to strangers, but you're entirely unsure of how to handle this one. There are chains in the corner.|Chains|The chains clink menacingly at you.|Stairway
