@@ -1,3 +1,3 @@
 # textgame
-Text based adventure game framework.
-Feel free to suggest changes.
+Text based adventure game.
+Feel free to contribute changes.
