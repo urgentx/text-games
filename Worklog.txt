@@ -1,4 +1,4 @@
 need to import items from res file, then add them to their respective rooms. DONE
 add exits to each room. DONE
-handle multiple items/exits in one room.
+handle multiple items/exits in one room. DONE 
 then player can interact with the items. 

@@ -11,7 +11,7 @@ public static void main(String [] args) {
 	RoomLoader roomLoader = new RoomLoader();
 	rooms = roomLoader.load();
 	
-	rooms.get(0).entrance(player);
+	
 	player.setPosition(rooms.get(0));
 	while (player.isAlive()){
 		int index = rooms.indexOf(player.getPosition());

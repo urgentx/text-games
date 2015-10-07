@@ -1,3 +1,7 @@
+/*Takes input line-by-line from file "Rooms.res" and initialises
+a new room for each line.
+*/
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileReader;
@@ -15,16 +19,31 @@ public class RoomLoader {
 	try (Scanner scanner = new Scanner(file);) {
 		while(scanner.hasNextLine()){			
 			String[] columns = scanner.nextLine().split("\\|");
+			
+			//Get room details
 			String roomName = columns[0];
 			String introMessage = columns[1];
-			String itemName = columns[2];
-			String itemDescription = columns[3];
-			String exit = columns[4];
-			Item item = new Item(itemName, itemDescription);
+			
+			//Get items
+			String [] itemArray = columns[2].split("\\$");
 			ArrayList<Item> items = new ArrayList<Item>();
-			items.add(item);
+			for(int i = 0; i < itemArray.length-1; i+=2 ){
+				String itemName = itemArray[i];
+				String itemDescription = itemArray[i+1];
+				Item item = new Item(itemName, itemDescription);
+				items.add(item);
+			}
+			
+			//Get exits
+			String [] exitArray = itemArray[itemArray.length-1].split("\\#");
 			ArrayList<String> exits = new ArrayList<String>();
-			exits.add(exit);
+			for(int j = 0; j < exitArray.length; j++){
+				String exit = exitArray[j];
+				exits.add(exit);
+			}
+			
+			
+			//initialise room and add to room collection
 			Room room = new Room(roomName, introMessage, items, exits);
 			rooms.add(room);
 		}		
