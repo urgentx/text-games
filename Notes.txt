@@ -1,0 +1,4 @@
+12.10 -  I believe the game would be very difficult to design while maintaining the disconnect between 
+	resources and the engine. The structure will be changed so that now each room has its own class
+	derived from the Room superclass. This will enable implementing unique logic in each class (this
+	would have been hard to do when reading from a separate resource file).
