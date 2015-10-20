@@ -1,4 +1,6 @@
-import java.util.ArrayList;
+
+
+import java.util.*;
 public class Game {
 public static void main(String [] args) {
 	
@@ -8,15 +10,28 @@ public static void main(String [] args) {
 	
 	
 	
-	
-	
+	Hashtable<String, Room> rooms = new Hashtable<String, Room>();
+	World world = new World(player, rooms);
+	Hashtable<String, Room> roomsUpdate = new Hashtable<String, Room>();
+	BedRoom br =  new BedRoom(world);
+	Corridor cr = new Corridor(world);
+	roomsUpdate.put("BedRoom", br);
+	roomsUpdate.put("Corridor", cr);
+	world.setRooms(roomsUpdate);
+	player.setPosition(world.getRooms().get("BedRoom"));
 	
 	
 	
 	//new game loop
-	BedRoom br =  new BedRoom(player);
-	br.entrance();
-	br.interact();
+	
+	
+	
+	Room currentRoom;
+	while(player.isAlive()){
+		currentRoom = player.getPosition();
+		currentRoom.entrance();
+		currentRoom.interact();
+	}
 	
 	
 	/*Old game initialiser and loop.

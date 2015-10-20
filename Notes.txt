@@ -1,4 +1,7 @@
-12.10 -  I believe the game would be very difficult to design while maintaining the disconnect between 
+12.10 -  I believe the game would be very difficult to design while maintaining the modularity between 
 	resources and the engine. The structure will be changed so that now each room has its own class
 	derived from the Room superclass. This will enable implementing unique logic in each class (this
 	would have been hard to do when reading from a separate resource file).
+
+20.10 -  The World object is a construct used to pass information about world state to rooms. It includes
+	the current player object as well as a hashtable with references to all initialised rooms. 

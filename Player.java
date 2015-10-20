@@ -1,8 +1,11 @@
+
+
 import java.util.ArrayList;
+
 
 public class Player {
 	
-	private static String name;
+	private String name;
 	private Room position;
 	private ArrayList inventory;
 	private boolean isAlive;
@@ -13,6 +16,7 @@ public class Player {
 		this.name = name;
 		isAlive = true;
 		System.out.println("Player created with name: " + name);
+		
 	}
 	
 	public boolean isAlive(){
@@ -28,7 +32,7 @@ public class Player {
 		
 	}
 	
-	public static String getName(){
+	public String getName(){
 		return name;
 	}
 	
