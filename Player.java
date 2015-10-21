@@ -7,7 +7,7 @@ public class Player {
 	
 	private String name;
 	private Room position;
-	private ArrayList inventory;
+	private ArrayList<Item> inventory =  new ArrayList<Item>();
 	private boolean isAlive;
 	
 	
@@ -17,6 +17,10 @@ public class Player {
 		isAlive = true;
 		System.out.println("Player created with name: " + name);
 		
+	}
+	
+	public void giveItem(Item item){
+		inventory.add(item);
 	}
 	
 	public boolean isAlive(){
@@ -43,4 +47,6 @@ public class Player {
 	public void setInventory(ArrayList inventory){
 		this.inventory = inventory;		
 	}
+	
+	
 }
