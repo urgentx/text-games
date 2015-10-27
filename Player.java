@@ -40,11 +40,11 @@ public class Player {
 		return name;
 	}
 	
-	public ArrayList getInventory(){
+	public ArrayList<Item> getInventory(){
 		return inventory;
 	}
 	
-	public void setInventory(ArrayList inventory){
+	public void setInventory(ArrayList<Item> inventory){
 		this.inventory = inventory;		
 	}
 	

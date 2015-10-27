@@ -4,7 +4,7 @@ import java.util.*;
 public class BedRoom extends Room {
 	
 	private World world;
-	private Player player;
+	
 	private Hashtable<String, Room> rooms;
 	private ArrayList<Item> items;
 
@@ -37,11 +37,13 @@ public class BedRoom extends Room {
 			Item w =  new Item("Wallet", "Contains your ID, $30 dollars cash and some business cards.");			
 			player.giveItem(w);
 		} else if (input.contains("pill")){
-			Item p =  new Item("Pill", "A pressed, unmarked pill of neutral smell.");			
-			player.giveItem(p);
+			Item pi =  new Item("Pill", "A pressed, unmarked pill of neutral smell.");			
+			player.giveItem(pi);
 		} else if (input.contains("prophylactic") || input.contains("condom")){
 			Item c =  new Item("Condom", "A rubber johnny. No needle holes.");			
 			player.giveItem(c);
+		} else {
+			checkInventory(input);
 		}
 	
 	
