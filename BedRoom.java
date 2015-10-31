@@ -42,8 +42,8 @@ public class BedRoom extends Room {
 		} else if (input.contains("prophylactic") || input.contains("condom")){
 			Item c =  new Item("Condom", "A rubber johnny. No needle holes.");			
 			player.giveItem(c);
-		} else {
-			checkInventory(input);
+		} else  if (input.contains("inventory")){
+			checkInventory();
 		}
 	
 	

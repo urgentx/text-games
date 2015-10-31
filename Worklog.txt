@@ -2,5 +2,5 @@
 [DONE]add exits to each room. 
 [DONE]handle multiple items/exits in one room.
 [IN PROGRESS]rework game structure so that instead of reading from res file, each room has its own class.
-item/character interaction.
+[IN PROGRESS]item/character interaction.
 populate world with rooms and items.

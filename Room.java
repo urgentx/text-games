@@ -16,13 +16,14 @@ public class Room{
 		
 	}
 	
-	public void checkInventory(String input){
-		System.out.println("You're carrying:");
-		if(input.contains("inventory")){
+	public void checkInventory(){
+		
+		
+			System.out.println("You're carrying:");
 			for(Item i : player.getInventory()){
 				System.out.println(i.getName() + " - " + i.getDescription());
 			}
-		} 
+		
 		
 		
 	}
