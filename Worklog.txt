@@ -3,4 +3,4 @@
 [DONE]handle multiple items/exits in one room.
 [IN PROGRESS]rework game structure so that instead of reading from res file, each room has its own class.
 [IN PROGRESS]item/character interaction.
-populate world with rooms and items.
+[IN PROGRESS]populate world with rooms, characters, items, and logic.

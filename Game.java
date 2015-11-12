@@ -7,6 +7,7 @@ public static void main(String [] args) {
 	/* TODO: Display intro message, get player name */
 	
 	Player player = new Player("Beau Dobson");	
+	System.out.println("You wake up in a bed. The white sheets are clean and warm against your body.");
 	
 	//INITIALIZE WORLD
 	

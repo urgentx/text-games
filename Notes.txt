@@ -5,3 +5,13 @@
 
 20.10 -  The World object is a construct used to pass information about world state to rooms. It includes
 	the current player object as well as a hashtable with references to all initialised rooms. 
+
+
+
+
+
+**Storyline ideas:**
+
+If you hit on the gril in the corridor, you need to give her a pill of this stuff that's sought after. Afte that she yields 
+some useful info or item. 
+

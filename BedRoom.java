@@ -17,7 +17,7 @@ public class BedRoom extends Room {
 	 
 	 
 	 public void entrance(){
-		 System.out.println("You wake up in a bed. The white sheets are clean and warm against your body.The odd sound of traffic can be heard from a window across the room, through which you see a starry night sky. Your keys, wallet, a pill and a wrapped prophylactic lie strewn about on the floor. A single white, wooden door leads out of the room.");		 
+		 System.out.println("The odd sound of traffic can be heard from a window across the room, through which you see a starry night sky. Your keys, wallet, a pill and a wrapped prophylactic lie strewn about on the floor. A single white, wooden door leads out of the room.");		 
 		 player.setPosition(this);
 	 }
 	
