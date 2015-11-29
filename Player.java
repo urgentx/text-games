@@ -48,5 +48,20 @@ public class Player {
 		this.inventory = inventory;		
 	}
 	
+	public boolean has (String itemName){
+		for (Item i : inventory){
+			if (i.getName().equals(itemName)){
+				return true;
+				
+			}
+			
+				
+			
+		}
+		return false;
+			
+		
+	}
+	
 	
 }

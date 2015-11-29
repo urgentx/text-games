@@ -10,7 +10,7 @@ public class Room{
 		
 	}
 	
-	public void interact(){
+	public void interact(String input){
 		
 		
 		

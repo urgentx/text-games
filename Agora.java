@@ -25,12 +25,17 @@ public class Agora extends Person{
 			
 			case "2": System.out.println("She seems taken aback by the depth of your compliment, and responds with positive body language. ");
 				System.out.println("1) Are you busy right now? Cos I'm not. ");
-				if(scanner.nextLine().toLowerCase().equals("1")){
+				if(p.has("Pill")){
+					System.out.println("2) I found something interesting in the room over there. ");
+				}
+				String input2 = scanner.nextLine().toLowerCase();
+				
+				if(input2.equals("1")){
 					System.out.println("Coldly she answers: \"I don't really know you, and not for free!\"");
-						if(scanner.nextLine().toLowerCase().equals("pill")){
-						System.out.println("She looks the pale white ball over and exclaims:\"Th-this is Zivacil!\" She surrenders some very useful information among other things.");
+						
 						break;
-				}			
+				}	else if (input2.equals("2")){
+						System.out.println("She looks the pale white ball over and exclaims: \"Th-this is Zivacil!\" She surrenders some very useful information while staring transfixed at the pill: \"Y'know, my boss would be very interested in a person who can source things like this. I'm sure he wouldn't mind me letting you know there's a passageway to the headquarters behind one of the panels in this very corridor!\". ");		
 					break;
 				}		
 			

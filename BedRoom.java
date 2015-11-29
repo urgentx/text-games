@@ -21,9 +21,8 @@ public class BedRoom extends Room {
 		 player.setPosition(this);
 	 }
 	
-	public void interact(){
-		Scanner scanner = new Scanner(System.in);
-		String input = scanner.nextLine().toLowerCase();
+	public void interact(String input){
+		
 		if(input.contains("window")){
 			System.out.println("You look out the window and notice you're higher up than expected.");
 		} else if (input.contains("door")){
@@ -42,9 +41,7 @@ public class BedRoom extends Room {
 		} else if (input.contains("prophylactic") || input.contains("condom")){
 			Item c =  new Item("Condom", "A rubber johnny. No needle holes.");			
 			player.giveItem(c);
-		} else  if (input.contains("inventory")){
-			checkInventory();
-		}
+		} 
 	
 	
 	

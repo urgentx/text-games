@@ -22,9 +22,11 @@ public static void main(String [] args) {
 	//initialise rooms, add to world
 	BedRoom br =  new BedRoom(world);
 	Corridor cr = new Corridor(world);
+	Headquarters hq = new Headquarters(world);
 	Hashtable<String, Room> rooms = new Hashtable<String, Room>();
 	rooms.put("BedRoom", br);
 	rooms.put("Corridor", cr);	
+	rooms.put("Headquarters", hq);
 	world.setRooms(rooms);
 	
 	
@@ -37,8 +39,25 @@ public static void main(String [] args) {
 	while(player.isAlive()){
 		currentRoom = player.getPosition();
 		currentRoom.entrance();
-		currentRoom.interact();
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine().toLowerCase();		
+		
+		//inventory check
+		if (input.contains("inventory")){
+			System.out.println("You're carrying:");
+			for(Item i : player.getInventory()){
+				System.out.println(i.getName() + " - " + i.getDescription());
+			}
+		}
+		//quit check
+		else if (input.contains("quit")){
+			System.out.println("Thanks for playing.");
+			System.exit(0);			
+		} else {			
+		currentRoom.interact(input);
+		}
 	}
+	
 	
 	
 	/*Old game initialiser and loop.
@@ -54,4 +73,5 @@ public static void main(String [] args) {
 	}*/
 	
 }
+	
 }

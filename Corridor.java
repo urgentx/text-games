@@ -21,9 +21,8 @@ public class Corridor extends Room{
 		 
 	 }
 	
-	public void interact(){
-		Scanner scanner = new Scanner(System.in);
-		String input = scanner.nextLine().toLowerCase();
+	public void interact(String input){
+		
 		if(input.contains("woman")){
 			world.getPeople().get("Agora").interact(player);
 		} else if (input.contains("door")){
@@ -34,7 +33,10 @@ public class Corridor extends Room{
 		} else  if (input.contains("inventory")){
 			checkInventory();
 		} else if (input.contains("panel")){
-			System.out.println("After a while pushing and pulling panels along the walls, you find one that slides aside. A dark hole lies behind it, with the sound of crying emanating from somewhere far within");
+			System.out.println("After a while pushing and pulling panels along the walls, you find one that slides aside. A dark tunnel lined with brushed steel large enough to walk through lies behind it, with the sound of crying emanating from somewhere far within.");
+		} else if (input.contains("tunnel")){
+			System.out.println("You venture slowly through the tunnel.");
+			player.setPosition(world.getRooms().get("Headquarters"));
 		}
 			
 	
