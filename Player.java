@@ -9,6 +9,7 @@ public class Player {
 	private Room position;
 	private ArrayList<Item> inventory =  new ArrayList<Item>();
 	private boolean isAlive;
+	private int money;
 	
 	
 	
@@ -46,6 +47,14 @@ public class Player {
 	
 	public void setInventory(ArrayList<Item> inventory){
 		this.inventory = inventory;		
+	}
+	
+	public int getMoney(){
+		return money;
+	}
+	
+	public void giveMoney(int cash){
+		money += cash;
 	}
 	
 	public boolean has (String itemName){

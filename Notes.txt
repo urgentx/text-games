@@ -12,6 +12,8 @@
 
 **Storyline ideas:**
 
-If you hit on the gril in the corridor, you need to give her a pill of this stuff that's sought after. Afte that she yields 
+If you hit on the gril in the corridor, you need to give her a pill of this stuff that's sought after. After that she yields 
 some useful info or item. 
 
+Consistency with the level of abstraction of actions should be maintained; i.e. if you have to specify to get dressed 
+then you should also have to specify to eat food. 

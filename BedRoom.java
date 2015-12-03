@@ -17,7 +17,7 @@ public class BedRoom extends Room {
 	 
 	 
 	 public void entrance(){
-		 System.out.println("The odd sound of traffic can be heard from a window across the room, through which you see a starry night sky. Your keys, wallet, a pill and a wrapped prophylactic lie strewn about on the floor. A single white, wooden door leads out of the room.");		 
+		 System.out.println("You wake up in a stone-walled circular chamber lined with several wooden slat beds and several buckets of water. It is morning, and you hear birds chirping outside the diamond-shaped window. Hopefully you haven't overslept! A set of keys, a knife, a pressed pill, and several bronze coins lie strewn about in your bed. One iron-hinged wooden door leads out of the room.");		 
 		 player.setPosition(this);
 	 }
 	
@@ -30,16 +30,16 @@ public class BedRoom extends Room {
 			
 			player.setPosition(world.getRooms().get("Corridor"));
 		} else if (input.contains("keys")){
-			Item p =  new Item("Keys", "Just your house keys, cars are for suckers.");			
+			Item p =  new Item("Keys", "Keys for various rooms in the castle.");			
 			player.giveItem(p);
-		} else if (input.contains("wallet")){
-			Item w =  new Item("Wallet", "Contains your ID, $30 dollars cash and some business cards.");			
-			player.giveItem(w);
+		} else if (input.contains("coin")){
+			System.out.println("Found 20 bronze pieces!");	
+			player.giveMoney(20);
 		} else if (input.contains("pill")){
 			Item pi =  new Item("Pill", "A pressed, unmarked pill of neutral smell.");			
 			player.giveItem(pi);
-		} else if (input.contains("prophylactic") || input.contains("condom")){
-			Item c =  new Item("Condom", "A rubber johnny. No needle holes.");			
+		} else if (input.contains("knife")){
+			Item c =  new Item("Knife", "A small but sharp steel folding blade.");			
 			player.giveItem(c);
 		} 
 	
