@@ -1,7 +1,10 @@
-
-
 import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 public class Game {
+	
+	private ArrayList<Item> items;
+	
 public static void main(String [] args) {
 	
 	/* TODO: Display intro message, get player name */
@@ -14,23 +17,32 @@ public static void main(String [] args) {
 	World world = new World(player);
 	
 	//initialise people, add to world
-	Person ag = new Agora();
-	Person cp = new Couple();
+	Person ag = new Agora();	
 	Hashtable<String,Person> people = new Hashtable<String, Person>();
-	people.put("Agora",ag);
-	people.put("Couple", cp);
+	people.put("Agora",ag);	
 	world.setPeople(people);
 	
 	//initialise rooms, add to world
 	BedRoom br =  new BedRoom(world);
-	Corridor cr = new Corridor(world);
-	Headquarters hq = new Headquarters(world);
+	Corridor cr = new Corridor(world);	
 	Hashtable<String, Room> rooms = new Hashtable<String, Room>();
 	rooms.put("BedRoom", br);
-	rooms.put("Corridor", cr);	
-	rooms.put("Headquarters", hq);
+	rooms.put("Corridor", cr);		
 	world.setRooms(rooms);
 	
+	//initialise items
+	Scanner itemScanner = new Scanner(System.in);
+	try{
+	itemScanner = new Scanner(new File("Items.res"));
+	} catch(FileNotFoundException e){
+		System.out.println("File not found.");
+	}
+	String itemInput = new String();
+	while(itemScanner.hasNextLine()){
+		itemInput = itemScanner.nextLine();
+		System.out.println(itemInput);
+	}
+	 
 	
 	player.setPosition(world.getRooms().get("BedRoom"));
 	
