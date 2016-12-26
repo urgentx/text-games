@@ -1,11 +1,22 @@
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
 public class Game {
 	
-	private ArrayList<Item> items;
+	private ArrayList<Item> items;	
 	
-public static void main(String [] args) {
+public static void main(String [] args) {	
+
+	//Alter System.out to always add newlines before output. 
+	
+	PrintStream myStream = new PrintStream(System.out) {
+		@Override
+		public void println(String s) {
+        super.println("\n\n" + s);
+		}
+	};
 	
 	/* TODO: Display intro message, get player name */
 	
@@ -37,12 +48,11 @@ public static void main(String [] args) {
 	} catch(FileNotFoundException e){
 		System.out.println("File not found.");
 	}
-	String itemInput = new String();
+	String[] itemInput = new String[100];
 	while(itemScanner.hasNextLine()){
-		itemInput = itemScanner.nextLine();
-		System.out.println(itemInput);
-	}
-	 
+		itemInput = itemScanner.nextLine().split("\\*");
+		Item item = new Item(itemInput[0], itemInput[1]);
+	} 
 	
 	player.setPosition(world.getRooms().get("BedRoom"));
 	
@@ -79,20 +89,8 @@ public static void main(String [] args) {
 		}
 	}
 	
-	
-	
-	/*Old game initialiser and loop.
-	player.setPosition(rooms.get(0));
-	ArrayList<Room> rooms =  new ArrayList<Room>();
-	RoomLoader roomLoader = new RoomLoader();
-	rooms = roomLoader.load();
-	while (player.isAlive()){
-		int index = rooms.indexOf(player.getPosition());
-		rooms.get(index).entrance(player);
-		//rooms.get(index).getInput(player);
-		break;
-	}*/
+}
+
 	
 }
-	
-}
+
