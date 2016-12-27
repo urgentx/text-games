@@ -5,6 +5,7 @@ public class World{
 	private Player player;
 	private Hashtable<String, Room> rooms;
 	private Hashtable<String, Person> people;
+	private Hashtable<String, Item> items;
 	
 	
 	public World(Player player){
@@ -34,6 +35,14 @@ public class World{
 	
 	public Hashtable<String, Person> getPeople(){
 		return people;
+	}
+	
+	public void setItems(Hashtable<String, Item> items){
+		this.items = items;
+	}
+	
+	public Hashtable<String, Item> getItems(){
+		return items;
 	}
 	
 	

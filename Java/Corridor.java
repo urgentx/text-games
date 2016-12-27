@@ -9,9 +9,7 @@ public class Corridor extends Room{
 
 		public Corridor(World world){
 			this.player = world.getPlayer();
-			this.world = world;
-			System.out.println("Corridor created.");
-			
+			this.world = world;			
 		}
 	 
 	 

@@ -1,5 +1,5 @@
 
-
+import java.util.Hashtable;
 import java.util.ArrayList;
 
 
@@ -7,7 +7,7 @@ public class Player {
 	
 	private String name;
 	private Room position;
-	private ArrayList<Item> inventory =  new ArrayList<Item>();
+	private Hashtable<String, Item> inventory =  new Hashtable<String, Item>();
 	private boolean isAlive;
 	private int money;
 	
@@ -15,13 +15,15 @@ public class Player {
 	
 	public Player(String name){
 		this.name = name;
-		isAlive = true;
-		System.out.println("Player created with name: " + name);
-		
+		isAlive = true;		
 	}
 	
-	public void giveItem(Item item){
-		inventory.add(item);
+	public void giveItem(Item item){		
+		inventory.put(item.getName(), item);
+	}
+	
+	public void takeItem(String itemName){
+		inventory.remove(itemName);
 	}
 	
 	public boolean isAlive(){
@@ -41,11 +43,11 @@ public class Player {
 		return name;
 	}
 	
-	public ArrayList<Item> getInventory(){
+	public Hashtable<String, Item> getInventory(){
 		return inventory;
 	}
 	
-	public void setInventory(ArrayList<Item> inventory){
+	public void setInventory(Hashtable<String, Item> inventory){
 		this.inventory = inventory;		
 	}
 	
@@ -58,18 +60,11 @@ public class Player {
 	}
 	
 	public boolean has (String itemName){
-		for (Item i : inventory){
-			if (i.getName().equals(itemName)){
+			if(inventory.contains(itemName)){
 				return true;
-				
+			} else {
+				return false;
 			}
-			
-				
-			
-		}
-		return false;
-			
-		
 	}
 	
 	

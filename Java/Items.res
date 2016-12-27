@@ -1,2 +1,3 @@
-Hammer * Good for a whack or two. 
-Tiara * Fit for a princess.
+Orange*Shiny, watery and nutritious.
+Orange Pulp*Good for attracting animals. 
+Orange Peel*Could be flammable. 
